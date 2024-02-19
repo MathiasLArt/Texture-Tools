@@ -18,7 +18,7 @@ class TexturePacker:
     def group_images(self):
         for img_file in self.images:
             name, _ = os.path.splitext(img_file)
-            prefix = name.split("_")[-1]  # Use the last part as the suffix
+            prefix = name.split("_")[-1]
             if prefix not in self.image_groups:
                 self.image_groups[prefix] = []
             self.image_groups[prefix].append(img_file)
